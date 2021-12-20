@@ -152,8 +152,24 @@ let univerisites = [
     }
 ]
 
-router.get('/', (req, res) => {
-    res.json(univerisites)
+router.get('/', (request, response) => {
+    const language = request.query.language
+    const region   = request.query.region
+
+    if (!language) response.status(404).send('Must provide a language')
+    
+    if (region) {
+        let university;
+
+        switch (region) {
+            case 'central': university = univerisites.filter(i => i.region == region); break;
+            default: response.status(404).send('region is not currect')
+        }
+
+        response.json(university)
+    }
+    
+    response.json(univerisites)
 })
 
 module.exports = router
