@@ -1,24 +1,24 @@
 const express = require('express')
 const router = express.Router()
 
-let univerisites = [
+let univerisitesEn = [
     {
-        id       : 100,
-        name     : "Central Province Universities",
-        region   : "central",
-        province : true
+        id          : 100,
+        name        : "Central Province Universities",
+        region      : "central",
+        province    : true
     },
     {
-        id       : 101,
-        name     : "Hail University",
-        about    : "The university was established by a royal decree on Tuesday 30 Jumada 1426 AH corresponding to 7 2005 AD, and in 2019 the university received two awards for excellence in scientific production, the highest impact and the most productive in the Scopus base of the branch of medical sciences. All subjects are in English, except for Islamic and Arabic studies.",
-        logo     : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fhail_logo.png?alt=media&token=c7210d1a-8da6-4a32-8f0b-ead1a84c02d6",
-        location : "https://goo.gl/maps/Lnmbs1LCRiHAXzz47",
-        website  : "http://www.uoh.edu.sa/Pages/default.aspx",
-        region   : "central",
-        twitter  : "https://twitter.com/_uoh",
-        facebook : "https://www.facebook.com/UOH.Page/?ref=page_internal",
-        youtube  : "https://www.youtube.com/user/UOHTubeSA"
+        id          : 101,
+        name        : "Hail University",
+        about       : "The university was established by a royal decree on Tuesday 30 Jumada 1426 AH corresponding to 7 2005 AD, and in 2019 the university received two awards for excellence in scientific production, the highest impact and the most productive in the Scopus base of the branch of medical sciences. All subjects are in English, except for Islamic and Arabic studies.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fhail_logo.png?alt=media&token=c7210d1a-8da6-4a32-8f0b-ead1a84c02d6",
+        location    : "https://goo.gl/maps/Lnmbs1LCRiHAXzz47",
+        website     : "http://www.uoh.edu.sa/Pages/default.aspx",
+        region      : "central",
+        twitter     : "https://twitter.com/_uoh",
+        facebook    : "https://www.facebook.com/UOH.Page/?ref=page_internal",
+        youtube     : "https://www.youtube.com/user/UOHTubeSA"
     },
     {
         id          : 102,
@@ -151,10 +151,10 @@ let univerisites = [
         youtube     : "https://www.youtube.com/user/shaqrauniv"
     },
     {
-        id       : 200,
-        name     : "Eastern Province Universities",
-        region   : "eastern",
-        province : true
+        id          : 200,
+        name        : "Eastern Province Universities",
+        region      : "eastern",
+        province    : true
     },
     {
         id          : 201,
@@ -208,25 +208,230 @@ let univerisites = [
         instagram   : "https://www.instagram.com/kfuniversity/",
         snapchat    : "https://www.snapchat.com/add/kfuniversity",
         youtube     : "https://www.youtube.com/user/KingFaisalUniversity"
+    },
+    {
+        id          : 300,
+        name        : "Northern Province Universities",
+        region      : "northern",
+        province    : true
+    },
+    {
+        id          : 301,
+        name        : "Jouf University",
+        about       : "Al Jouf University is located in Al-Jawf, Saudi Arabia. It was founded in 2005 by royal decree.[1][2] It is currently the only university serving the Al-Jouf Region.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fjouf_logo.gif?alt=media&token=e95ece1b-ef15-47f9-b7cd-834b864c4209",
+        location    : "https://goo.gl/maps/KZU1sJo5HEEkXwhEA",
+        website     : "https://www.ju.edu.sa/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9/",
+        region      : "northern",
+        twitter     : "https://twitter.com/JoufUniversity",
+        facebook    : "https://www.facebook.com/ju.edu.sa",
+        instagram   : "https://www.instagram.com/joufuniversity/",
+        youtube     : "https://www.youtube.com/c/joufuniversity"
+    },
+    {
+        id          : 302,
+        name        : "Northern Borders University",
+        about       : "Northern Border University (NBU) is located in Arar, Saudi Arabia. It was founded in 2007. It contains 16 colleges: 9 in Arar, 4 in Rafha, 2 in Turayf, and 1 in Al Uwayqilah. It has a variety of majors in multiple levels, including bachelor's and master's degrees.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fnorthern_borders_logo.png?alt=media&token=aedd2294-d238-4525-9747-47950b0336a8",
+        location    : "https://goo.gl/maps/6PKM8qqFcxDtqehbA",
+        website     : "https://www.nbu.edu.sa/AR/Pages/default.aspx",
+        application : "https://play.google.com/store/apps/details?id=edu.nbu.nbuapp",
+        region      : "northern",
+        twitter     : "https://twitter.com/NBU_KSA?s=20",
+        facebook    : "https://www.facebook.com/NBU2007/",
+        instagram   : "https://www.instagram.com/nbu_ksa/",
+        snapchat    : "https://www.snapchat.com/add/nbu_ksa",
+        youtube     : "https://www.youtube.com/channel/UC3do-obj6Iwv9mtbsnFoSFg"
+    },
+    {
+        id          : 303,
+        name        : "Tabuk University",
+        about       : "University of Tabuk is located in Tabuk, Saudi Arabia, founded in 2006.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Ftabuk_logo.png?alt=media&token=3b054ae6-7d42-4c72-809c-0b61283f6127",
+        location    : "https://goo.gl/maps/qWRMtZcS7taNifQGA",
+        website     : "https://www.ut.edu.sa/",
+        application : "https://play.google.com/store/apps/details?id=com.ut.DSA",
+        region      : "northern",
+        twitter     : "https://twitter.com/U_Tabuk?s=20",
+        facebook    : "https://www.facebook.com/UniversityOfTabuk/",
+        youtube     : "https://www.youtube.com/channel/UCJLwfuPo6yXou4x_nCiCoBQ"
+    },
+    {
+        id          : 400,
+        name        : "Southern Province Universities",
+        region      : "southern",
+        province    : true
+    },
+    {
+        id          : 401,
+        name        : "Albaha University",
+        about       : "Albaha University is a university in Al Baha city, the capital of Al Baha province, Saudi Arabia. It is a public university that was founded in 2006. The main campus is at Alaqiq about 25 km away from Al Baha city. The university emphasizes public services in all of its disciplines. A new organization project at the university was named a lighting platform that was established by students.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Falbaha_logo.png?alt=media&token=ca6549a6-287a-4db1-a6a0-2e61c1c7e939",
+        location    : "https://goo.gl/maps/ir1BmAT6Y4zaAJLL6",
+        website     : "https://bu.edu.sa/",
+        region      : "southern",
+        twitter     : "https://twitter.com/BahaUniversity?s=20",
+        facebook    : "https://www.facebook.com/abahauniversity/",
+    },
+    {
+        id          : 402,
+        name        : "Bisha University",
+        about       : "Founded in 2014, University of Bisha is a non-profit public higher-education institution located in Bisha, Asir. Officially recognized by the Ministry of Education of Saudi Arabia, University of Bisha (UB) is a coeducational Saudi Arabian higher education institution. University of Bisha (UB) offers courses and programs leading to officially recognized higher education degrees such as bachelor degrees in several areas of study.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fbisha_logo.png?alt=media&token=361fa5a1-9f21-487f-adee-26a9737f2a04",
+        location    : "https://goo.gl/maps/RmjrUmFkvKSzaVQv6",
+        website     : "https://www.ub.edu.sa/",
+        region      : "southern",
+        twitter     : "https://twitter.com/Bisha_U?s=20",
+        facebook    : "https://www.facebook.com/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A8%D9%8A%D8%B4%D8%A9-645574282246386/",
+        youtube     : "https://www.youtube.com/channel/UCEz4UQw7Q3ZTIvET8v4caUg"
+    },
+    {
+        id          : 403,
+        name        : "Jazan University",
+        about       : "Jazan University (commonly referred to as JazanU) is a public research university based in the city of Jazan . Founded in 2006, it is the province's only university and one of the largest public, nonprofit institutions of higher education in the Kingdom of Saudi Arabia.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fjazan_logo.png?alt=media&token=0eda10ee-000c-404a-ab1e-b14403ed8035",
+        location    : "https://goo.gl/maps/2R3NA4jCqY7gu42h7",
+        website     : "https://www.jazanu.edu.sa/",
+        region      : "southern",
+        twitter     : "https://twitter.com/JazanUniversity?s=20",
+        facebook    : "https://www.facebook.com/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%AC%D8%A7%D8%B2%D8%A7%D9%86-225505867463751/"
+    },
+    {
+        id          : 404,
+        name        : "King Khalid University",
+        about       : "King Khalid University is a public university in Abha, Saudi Arabia. In 1998, HRH Crown Prince ordered the merger of Imam Mohammad Ibn Saud Islamic University and King Saud University in the Southern Region into one entity under the new identity of 'King Khalid University'.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fkhalid_logo.jpg?alt=media&token=8734a3be-6cf8-4525-9274-0cb882717e3d",
+        location    : "https://goo.gl/maps/6dtf4J67fSqsEoLKA",
+        website     : "https://www.kku.edu.sa/",
+        application : "https://play.google.com/store/apps/details?id=com.ats.android.kku.student.app",
+        region      : "southern",
+        twitter     : "https://twitter.com/kkueduksa?s=20",
+        facebook    : "https://www.facebook.com/KingKhalidUniversity/",
+        instagram   : "https://www.instagram.com/insta_kku/",
+        youtube     : "https://www.youtube.com/user/kkutubeChannel"
+    },
+    {
+        id          : 405,
+        name        : "Najran University",
+        about       : "Najran University began as a community college of King Khalid University. On 11 November 2006,[1] King Abdullah Bin Abdulaziz issued the royal directive to convert the community college in Najran into an independent self-sustaining university.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fnajran_logo.png?alt=media&token=8d6d1440-7466-4471-8986-934e303a652e",
+        location    : "https://goo.gl/maps/rqUuBnUAVjqP238G9",
+        website     : "https://www.nu.edu.sa/",
+        application : "https://play.google.com/store/apps/details?id=com.ats.android.najranuni.student.app",
+        region      : "southern",
+        twitter     : "https://twitter.com/Najran_Univers?s=20",
+        facebook    : "https://www.facebook.com/Najran-University-194489110567358"
+    },
+    {
+        id          : 500,
+        name        : "Western Province Universities",
+        region      : "western",
+        province    : true
+    },
+    {
+        id          : 501,
+        name        : "Islamic University",
+        about       : "The Islamic University of Madinah was founded by the government of Saudi Arabia by a royal decree in 1961 in the Islamic holy city of Medina. Many have associated the university with the Salafi ideology, and have stated it has exported Salafi-inclined theologians around the world.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fislamic_logo.png?alt=media&token=ea30ab82-9caf-460e-9b5b-15bfbf58e84c",
+        location    : "https://goo.gl/maps/mkKoFNwZBbrajzbQA",
+        website     : "https://www.iu.edu.sa/",
+        region      : "western",
+        twitter     : "https://twitter.com/iu_edu?s=20",
+        facebook    : "https://www.facebook.com/iu.edu.sa/",
+        instagram   : "https://www.instagram.com/iu_edu/"
+    },
+    {
+        id          : 502,
+        name        : "Jeddah University",
+        about       : "Jeddah University is a public university located in Jeddah, Makkah, Saudi Arabia. The University of Jeddah was established in 2014 and recognized by the Ministry of Education Saudi Arabia.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fjeddah_logo.png?alt=media&token=2e4b8ce2-b1a3-418c-9912-7e133c2ed972",
+        location    : "https://goo.gl/maps/K15RddG3bTh5ak8B8",
+        website     : "https://www.uj.edu.sa/Home.aspx",
+        region      : "western",
+        twitter     : "https://twitter.com/UOfjeddah?s=20",
+        facebook    : "https://www.facebook.com/UOfjeddah/",
+        instagram   : "https://www.instagram.com/ujeddah/",
+        youtube     : "https://www.youtube.com/channel/UCphjXdU60T_ZrH_j17fQBxQ/"
+    },
+    {
+        id          : 503,
+        name        : "King Abdulaziz University",
+        about       : "King Abdulaziz University (KAU) is a public university in Jeddah, Saudi Arabia. It was established in 1967 as a private university. In 1974, King Abdulaziz University was converted to a public university by a decision of the Council Ministers of Saudi Arabia under then-King Faisal's orders. In 2021, it is ranked the #1 Arab university by Times Higher Education.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fabdulaziz_logo.png?alt=media&token=e7e558c2-eb67-46a1-83f3-291decf49290",
+        location    : "https://goo.gl/maps/hgSCvVGVtSBM9hXb9",
+        website     : "https://www.kau.edu.sa/Home.aspx",
+        application : "https://play.google.com/store/apps/details?id=com.kau.mykau",
+        region      : "western",
+        twitter     : "https://twitter.com/kauweb",
+        facebook    : "https://www.facebook.com/KingAbdulazizUniversity",
+        youtube     : "https://www.youtube.com/user/kauUniversity"
+    },
+    {
+        id          : 504,
+        name        : "Taibah University",
+        about       : "Taibah University is a university in Medina, Saudi Arabia, established in 2003. Taibah University has witnessed an enormous increase in the number of its students (both men and women). In 2003, there were 7,761 enrolled students. there are more than 20,000 students enrolled.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Ftaibah_logo.png?alt=media&token=1714abb0-5aa0-4939-ab98-c628fb50b344",
+        location    : "https://goo.gl/maps/LzXz9vqicTi5jcwTA",
+        website     : "https://www.taibahu.edu.sa/Pages/AR/Home.aspx",
+        application : "https://play.google.com/store/apps/details?id=com.taibah.university",
+        news        : "https://www.taibahu.edu.sa/Pages/AR/Rss.aspx",
+        region      : "western",
+        twitter     : "https://twitter.com/taibahu",
+        facebook    : "https://www.facebook.com/UniversityOfTaibah/",
+        instagram   : "https://www.instagram.com/taibah_uni/",
+        youtube     : "https://www.youtube.com/user/universityoftaibah"
+    },
+    {
+        id          : 505,
+        name        : "Taif University",
+        about       : "Taif University is located in Taif, Saudi Arabia. It was established in 2004.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Ftaif_logo.png?alt=media&token=f1f5d94f-791d-472f-a66b-15b45ac831fd",
+        location    : "https://goo.gl/maps/ZqkKag88tTWGDQ147",
+        website     : "https://www.tu.edu.sa/",
+        application : "https://play.google.com/store/apps/details?id=io.cordova.myapp2b29b9",
+        region      : "western",
+        twitter     : "https://twitter.com/TaifUniversity",
+        facebook    : "https://www.facebook.com/taifuniv/",
+        youtube     : "https://www.youtube.com/user/TaifUniversity"
+    },
+    {
+        id          : 506,
+        name        : "Umm Al-Qura University",
+        about       : "Umm Al-Qura University (UQU) is a large public Islamic university in Mecca, Saudi Arabia. The university was established as the College of Sharia (Islamic Law) in 1949 before being joined by new colleges and renamed as Umm Al-Qura by royal decree in 1981.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Falqura_logo.png?alt=media&token=de160ea2-ab0d-40d5-a654-0a92beebc1d8",
+        location    : "https://goo.gl/maps/AUfetiHb2y1caQdJ7",
+        website     : "https://uqu.edu.sa/",
+        application : "https://play.google.com/store/apps/details?id=uqu.edu.sa",
+        news        : "https://uqu.edu.sa/App/Rss/all",
+        region      : "western",
+        twitter     : "https://twitter.com/uqu_edu?lang=ar",
+        facebook    : "https://www.facebook.com/uquedu/",
+        youtube     : "https://www.youtube.com/user/uqutube"
     }
 ]
 
 router.get('/', (request, response) => {
     const language = request.query.language
     const region   = request.query.region
+    let univerisites;
 
-    if (!language) response.status(404).send('Must provide a language')
+    switch (language) {
+        case undefined : return response.status(404).send('Must provide a language'); break;
+        case 'en'      : univerisites = univerisitesEn; break;
+        default        : return response.status(404).send('language is not supported'); break;
+    }
     
     if (region) {
-        let university;
-
         switch (region) {
-            case 'central': university = univerisites.filter(i => i.region == region); break;
-            case 'eastern': university = univerisites.filter(i => i.region == region); break;
-            default: response.status(404).send('region is not currect')
+            case 'central'  : univerisites = univerisites.filter(i => i.region == region); break;
+            case 'eastern'  : univerisites = univerisites.filter(i => i.region == region); break;
+            case 'northern' : univerisites = univerisites.filter(i => i.region == region); break;
+            case 'southern' : univerisites = univerisites.filter(i => i.region == region); break;
+            case 'western'  : univerisites = univerisites.filter(i => i.region == region); break;
+            default         : return response.status(404).send('region is not currect')
         }
 
-        response.json(university)
+        return response.json(univerisites)
     }
     
     response.json(univerisites)
