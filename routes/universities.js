@@ -149,6 +149,65 @@ let univerisites = [
         facebook    : "https://www.facebook.com/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%B4%D9%82%D8%B1%D8%A7%D8%A1-119256518143298/",
         instagram   : "https://www.instagram.com/shaqra_uni/",
         youtube     : "https://www.youtube.com/user/shaqrauniv"
+    },
+    {
+        id       : 200,
+        name     : "Eastern Province Universities",
+        region   : "eastern",
+        province : true
+    },
+    {
+        id          : 201,
+        name        : "Hafr Al-Batin University",
+        about       : "University of Hafr Al Batin, often referred to as UOHB, is a Saudi public university that located in Hafr Albatin city in the eastern province. It was founded in 2014 on the royal decree by King Abdullah on April 3, 2014.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fhafr_batin_logo.png?alt=media&token=26f004af-a4f0-42a3-a2ca-8a12b7ae9436",
+        location    : "https://goo.gl/maps/s5rdnzXMrfsSNdLm6",
+        website     : "https://www.uhb.edu.sa/ar/Pages/default.aspx",
+        region      : "eastern",
+        twitter     : "https://twitter.com/UoHB_Official?s=20"
+    },
+    {
+        id          : 202,
+        name        : "Imam Abdulrahman University",
+        about       : "Imam Abdulrahman Bin Faisal University (IAU), formerly known as the University of Dammam (UoD), is a university in Dammam, Saudi Arabia. It is one of the oldest universities in the Eastern Province of Saudi Arabia. It is one of the leading universities in medicine for both male and female students. After its separation from King Faisal University, it is now thriving to become one of the best universities in the Kingdom.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Fimam_abdulrahman_logo.png?alt=media&token=d4f45d22-9f4b-4c25-b23d-dcc183522c81",
+        location    : "https://goo.gl/maps/sS2VyxXAPkMZaLoaA",
+        website     : "https://www.iau.edu.sa/ar",
+        colleges    : "https://www.iau.edu.sa/ar/colleges",
+        application : "https://play.google.com/store/apps/details?id=myiau.uod.com.myiau",
+        news        : "https://www.iau.edu.sa/ar/rss.xml",
+        region      : "eastern",
+        twitter     : "https://twitter.com/UOD_EDU_SA",
+        facebook    : "https://www.facebook.com/Imam.Abdulrahman.Bin.Faisal.University",
+        youtube     : "https://www.youtube.com/user/dammamuniversity"
+    },
+    {
+        id          : 203,
+        name        : "King Fahd University of Petroleum and Minerals",
+        about       : "King Fahd University of Petroleum and Minerals (KFUPM or UPM) is a public university in Dhahran, Saudi Arabia. Among Saudi universities, its science, engineering, business and management programs are the most highly regarded in the country as well as in the whole region. The university has ranked fourth among top 100 worldwide universities granted US Utility Patents in 2018.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Ffahd_logo.png?alt=media&token=b9721fe6-9ddf-4f72-a63c-9d6ca3bb6849",
+        location    : "https://goo.gl/maps/MKeoba5vUC3x7mVs7",
+        website     : "http://www.kfupm.edu.sa/ar/Default.aspx",
+        application : "https://play.google.com/store/apps/details?id=sa.edu.kfupm",
+        region      : "eastern",
+        twitter     : "https://twitter.com/kfupm",
+        facebook    : "https://www.facebook.com/KFUPM",
+        instagram   : "https://www.instagram.com/kfupm/"
+    },
+    {
+        id          : 204,
+        name        : "King Faisal University",
+        about       : "King Faisal University (KFU) is a public university with the main campus in the city of Hofuf in Al Ahsa, Saudi Arabia founded in 1975. KFU was initially established with four colleges: two in Dammam and the other two in Al-Ahsa. Later, the colleges in Dammam have been segregated to become the Imam Abdulrahman Bin Faisal University.",
+        logo        : "https://firebasestorage.googleapis.com/v0/b/universities-directory.appspot.com/o/Universities%20Logo%2Ffaisal_logo.png?alt=media&token=87e5fbe7-31ba-46ce-b75a-b673615e777d",
+        location    : "https://goo.gl/maps/CzhV5stPwiFvH98W8",
+        website     : "https://www.kfu.edu.sa/sites/Home/",
+        application : "https://play.google.com/store/apps/details?id=com.kingfisal.university",
+        region      : "eastern",
+        twitter     : "https://twitter.com/kfuniversity",
+        facebook    : "https://www.facebook.com/KFUuniversity/",
+        instagram   : "https://www.instagram.com/kfuniversity/",
+        snapchat    : "https://www.snapchat.com/add/kfuniversity",
+        youtube     : "https://www.youtube.com/user/KingFaisalUniversity"
     }
 ]
 
@@ -163,6 +222,7 @@ router.get('/', (request, response) => {
 
         switch (region) {
             case 'central': university = univerisites.filter(i => i.region == region); break;
+            case 'eastern': university = univerisites.filter(i => i.region == region); break;
             default: response.status(404).send('region is not currect')
         }
 
