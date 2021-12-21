@@ -5,7 +5,7 @@
 <p align="center">
   Server that has all the information related to the saudi public universities<br>
   which provides an easy, simple and manageable API to retrieve the data.<br>
-  <b><a href="" target="_blank">Server API</b></a>
+  <b><a href="https://saudiuniversitiesdirectory.herokuapp.com/api/v1" target="_blank">Server API</b></a>
 </p>
 
 ##
@@ -15,20 +15,20 @@
 <h4 align="center">Retreive All the Universities</h4>
 
 <table align="center">
-    <tr><td align="center">1</td><td>add to the <b><a href="" target="_blank">Base URL</b></a> this endpoint /universities</td></tr>
+    <tr><td align="center">1</td><td>add to the <b><a href="https://saudiuniversitiesdirectory.herokuapp.com/api/v1" target="_blank">Base URL</b></a> this endpoint /universities</td></tr>
     <tr><td align="center">2</td><td>must provides a supported langauge: English (en) or Arabic (ar)</td></tr>
-    <tr><td align="center">3</td><td><a href="" target="_blank">URL example for retreiving all universities with English langauge</a></td></tr>
-    <tr><td align="center">4</td><td>Optional - Retrieve specific region (central, eastern, northern, southern, western)</td></tr>
-    <tr><td align="center">5</td><td><a href="" target="_blank">URL example for retreiving all central region universities with English langauge</a></td></tr>
+    <tr><td align="center">3</td><td><a href="https://saudiuniversitiesdirectory.herokuapp.com/api/v1/universities/en" target="_blank">URL example for retreiving all universities with English langauge</a></td></tr>
+    <tr><td align="center">4</td><td>Optional - Query specific region: (central, eastern, northern, southern, western)</td></tr>
+    <tr><td align="center">5</td><td><a href="https://saudiuniversitiesdirectory.herokuapp.com/api/v1/universities/en?region=central" target="_blank">URL example for retreiving all central region universities with English langauge</a></td></tr>
 </table>
 
 <h4 align="center">Retreive Specific University</h4>
 
 <table align="center">
-    <tr><td align="center">1</td><td>add to the <b><a href="" target="_blank">Base URL</b></a> this endpoint /university</td></tr>
+    <tr><td align="center">1</td><td>add to the <b><a href="https://saudiuniversitiesdirectory.herokuapp.com/api/v1" target="_blank">Base URL</b></a> this endpoint /university</td></tr>
     <tr><td align="center">2</td><td>must provides a supported langauge: English (en) or Arabic (ar)</td></tr>
     <tr><td align="center">3</td><td>provide the university ID that you get from the previous endpoint</td></tr>
-    <tr><td align="center">4</td><td><a href="" target="_blank">URL example for retreiving a specific university with English langauge</a></td></tr>
+    <tr><td align="center">4</td><td><a href="https://saudiuniversitiesdirectory.herokuapp.com/api/v1/university/en?id=107" target="_blank">URL example for retreiving a specific university with English langauge</a></td></tr>
 </table>
 
 ##
