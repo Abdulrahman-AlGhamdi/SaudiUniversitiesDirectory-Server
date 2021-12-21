@@ -1,16 +1,15 @@
 const express = require('express')
 const router  = express.Router()
 
-router.get('/', (request, response) => {
-    const language   = request.query.language
+router.get('/:language', (request, response) => {
+    const language   = request.params.language.toLowerCase()
     const region     = request.query.region
     let univerisites = require('../data/data')
 
     switch (language) {
-        case undefined : return response.status(404).send('Must provide a language')
         case 'en'      : univerisites = univerisites.univerisitesEn; break
         case 'ar'      : univerisites = univerisites.univerisitesAr; break
-        default        : return response.status(404).send('language is not supported')
+        default        : return response.status(400).send('language is not supported')
     }
     
     if (region) switch (region) {
@@ -19,7 +18,7 @@ router.get('/', (request, response) => {
         case 'northern' : univerisites = univerisites.filter(i => i.region == region); break;
         case 'southern' : univerisites = univerisites.filter(i => i.region == region); break;
         case 'western'  : univerisites = univerisites.filter(i => i.region == region); break;
-        default         : return response.status(404).send('region is not currect')
+        default         : return response.status(400).send('region is not currect')
     }
     
     response.json(univerisites)
