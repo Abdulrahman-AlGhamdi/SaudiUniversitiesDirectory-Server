@@ -3,9 +3,9 @@ const app = express()
 
 app.use(express.json())
 
-app.use('/universities', require('./routes/universities'))
+app.use('/api/v1//universities', require('./routes/universities'))
 
-app.use('/university', require('./routes/university'))
+app.use('/api/v1//university', require('./routes/university'))
 
 app.use((_, response) => {
     response.status(404).send(`<b>Welcome to Saudi Universities Directory Server</b><br>

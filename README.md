@@ -1,6 +1,6 @@
 <div align="center"><img src="https://i.ibb.co/mNRtFcB/icon.png" width="20%"></div>
 
-<h3 align="center">Saudi Universities Directory - Sdrver</h3>
+<h3 align="center">Saudi Universities Directory - Server</h3>
 
 <p align="center">
   Server that has all the information related to the saudi public universities<br>
