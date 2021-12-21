@@ -3,9 +3,9 @@ const app = express()
 
 app.use(express.json())
 
-app.use('/api/v1//universities', require('./routes/universities'))
+app.use('/api/v1/universities', require('./routes/universities'))
 
-app.use('/api/v1//university', require('./routes/university'))
+app.use('/api/v1/university', require('./routes/university'))
 
 app.use((_, response) => {
     response.status(404).send(`<b>Welcome to Saudi Universities Directory Server</b><br>
@@ -14,6 +14,6 @@ app.use((_, response) => {
     (<a href="https://github.com/Abdulrahman-AlGhamdi/SaudiUniversitiesDirectory-Server" target="_blank">Github Project Page</a>)`)
 })
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('Server is running on port 5000')
 })
