@@ -913,4 +913,4 @@ const univerisites = {
 	],
 }
 
-export default univerisites
+module.exports = univerisites
